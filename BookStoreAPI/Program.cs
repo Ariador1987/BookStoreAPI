@@ -1,5 +1,6 @@
 using BookStoreAPI.Contracts;
 using BookStoreAPI.Data;
+using BookStoreAPI.Mappings;
 using BookStoreAPI.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -23,6 +24,8 @@ builder.Services.AddCors(o =>
                         .AllowAnyMethod()
                         .AllowAnyHeader());
 });
+
+builder.Services.AddAutoMapper(typeof(Maps));
 
 builder.Services.AddSwaggerGen(x =>
 {

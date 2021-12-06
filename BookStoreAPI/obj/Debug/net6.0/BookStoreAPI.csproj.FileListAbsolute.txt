@@ -67,3 +67,5 @@ C:\Users\BOKI\source\repos\BookStore\BookStoreAPI\obj\Debug\net6.0\BookStoreAPI.
 C:\Users\BOKI\source\repos\BookStore\BookStoreAPI\bin\Debug\net6.0\nlog.config
 C:\Users\BOKI\source\repos\BookStore\BookStoreAPI\bin\Debug\net6.0\NLog.dll
 C:\Users\BOKI\source\repos\BookStore\BookStoreAPI\bin\Debug\net6.0\NLog.Extensions.Logging.dll
+C:\Users\BOKI\source\repos\BookStore\BookStoreAPI\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\BOKI\source\repos\BookStore\BookStoreAPI\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

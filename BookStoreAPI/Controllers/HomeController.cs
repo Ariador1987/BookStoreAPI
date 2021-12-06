@@ -21,8 +21,6 @@ namespace BookStoreAPI.Controllers
         }
 
         
-        /// <returns></returns>
-        // GET: api/<HomeController>
 
         /// <summary>
         /// Get Id Value
