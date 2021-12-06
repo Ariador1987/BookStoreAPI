@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BookStoreAPI</name>
+    </assembly>
+    <members>
+        <member name="T:BookStoreAPI.Controllers.HomeController">
+            <summary>
+            This is an API Test Controller
+            </summary>
+        </member>
+        <member name="M:BookStoreAPI.Controllers.HomeController.Get(System.Int32)">
+            <summary>
+            Get Id Value
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
