@@ -15,3 +15,5 @@
 2021-12-08 11:12:18.4531 INFO Create attempted
 2021-12-08 11:13:58.9848 INFO Create attempted
 2021-12-08 11:14:11.2752 INFO Create sucessful
+2021-12-08 12:13:19.9157 INFO Books Update: Update attempted on record 1.
+2021-12-08 12:13:43.9265 INFO Books Update: Record with id: 1 succesfully updated.

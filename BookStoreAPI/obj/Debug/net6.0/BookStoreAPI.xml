@@ -60,14 +60,19 @@
             Get a single book with param id
             </summary>
             <param name="id"></param>
-            <returns>A book</returns>
         </member>
         <member name="M:BookStoreAPI.Controllers.BooksController.Create(BookStoreAPI.Data.DTOs.BookCreateDTO)">
             <summary>
             Creates a single book
             </summary>
             <param name="bookDTO"></param>
-            <returns></returns>
+        </member>
+        <member name="M:BookStoreAPI.Controllers.BooksController.Update(System.Int32,BookStoreAPI.Data.DTOs.BookUpdateDTO)">
+            <summary>
+            Updates a single book
+            </summary>
+            <param name="id"></param>
+            <param name="bookDTO"></param>
         </member>
         <member name="T:BookStoreAPI.Controllers.HomeController">
             <summary>

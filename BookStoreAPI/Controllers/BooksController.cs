@@ -58,7 +58,6 @@ namespace BookStoreAPI.Controllers
         /// Get a single book with param id
         /// </summary>
         /// <param name="id"></param>
-        /// <returns>A book</returns>
         [HttpGet("{id:int}")]
         [ProducesResponseType(200)]
         [ProducesResponseType(404)]
@@ -94,7 +93,6 @@ namespace BookStoreAPI.Controllers
         /// Creates a single book
         /// </summary>
         /// <param name="bookDTO"></param>
-        /// <returns></returns>
         [HttpPost]
         [ProducesResponseType(201)]
         [ProducesResponseType(400)]
@@ -127,11 +125,64 @@ namespace BookStoreAPI.Controllers
                 }
 
                 _loggerService.LogInfo("Create sucessful");
-                return StatusCode(201, book);
+                return StatusCode(201);
             }
             catch (Exception ex)
             {
                 return InternalError($"{location}: {ex.Message} - {ex.InnerException}");
+            }
+        }
+
+        /// <summary>
+        /// Updates a single book
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="bookDTO"></param>
+        [HttpPut("{id:int}")]
+        [ProducesResponseType(204)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(404)]
+        [ProducesResponseType(500)]
+        public async Task<IActionResult> Update(int id, [FromBody] BookUpdateDTO bookDTO)
+        {
+            var location = GetControllerActionNames();
+
+            try
+            {
+                _loggerService.LogInfo($"{location}: Update attempted on record {id}.");
+                if (id < 1 || bookDTO is null || bookDTO.Id != id)
+                {
+                    _loggerService.LogWarn($"{location}: Update failed with bad data - id: {id}.");
+                    return BadRequest();
+                }
+
+                var isExsists = await _bookRepository.isExsists(id);
+                if (!isExsists)
+                {
+                    _loggerService.LogWarn($"{location}: failed to retrieve record with id: {id}");
+                    return NotFound();
+                }
+
+                if (!ModelState.IsValid)
+                {
+                    _loggerService.LogWarn($"{location}: Data was incomplete");
+                    return BadRequest(ModelState);
+                }
+
+                var book = _mapper.Map<Book>(bookDTO);
+                var isSuccess = await _bookRepository.Update(book);
+                if (!isSuccess)
+                {
+                    return InternalError($"{location}: Update failed");
+                }
+
+                _loggerService.LogInfo($"{location}: Record with id: {id} succesfully updated.");
+                return StatusCode(204);
+            }
+            catch (Exception ex)
+            {
+                _loggerService.LogWarn($"{location}: Something went wrong with creating a book.");
+                return InternalError($"{location}: Creation failed. {ex.Message} - {ex.InnerException}.");
             }
         }
 
