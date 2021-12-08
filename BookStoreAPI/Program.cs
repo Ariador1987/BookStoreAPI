@@ -42,6 +42,9 @@ builder.Services.AddSwaggerGen(x =>
 });
 
 builder.Services.AddSingleton<ILoggerService, LoggerService>();
+builder.Services.AddScoped<IAuthorRepository, AuthorRepository>();
+//builder.Services.AddScoped<IBookRepository, BookRepository>();
+
 
 builder.Services.AddControllers();
 

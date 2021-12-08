@@ -37,6 +37,11 @@ namespace BookStoreAPI.Services
             return obj;
         }
 
+        public async Task<bool> isExsists(int id)
+        {
+            return await _db.Authors.AnyAsync(x => x.Id == id);
+        }
+
         public async Task<bool> Save()
         {
             var changes = await _db.SaveChangesAsync();
@@ -48,5 +53,7 @@ namespace BookStoreAPI.Services
             _db.Authors.Update(entity);
             return await Save();
         }
+
+        
     }
 }
