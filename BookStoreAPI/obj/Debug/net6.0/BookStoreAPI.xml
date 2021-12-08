@@ -44,6 +44,31 @@
             <param name="id"></param>
             <returns></returns>
         </member>
+        <member name="T:BookStoreAPI.Controllers.BooksController">
+            <summary>
+            Endpoint used to interact with the Books in book stores database
+            </summary>
+        </member>
+        <member name="M:BookStoreAPI.Controllers.BooksController.GetAll">
+            <summary>
+            Get the list of books
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BookStoreAPI.Controllers.BooksController.GetBook(System.Int32)">
+            <summary>
+            Get a single book with param id
+            </summary>
+            <param name="id"></param>
+            <returns>A book</returns>
+        </member>
+        <member name="M:BookStoreAPI.Controllers.BooksController.Create(BookStoreAPI.Data.DTOs.BookCreateDTO)">
+            <summary>
+            Creates a single book
+            </summary>
+            <param name="bookDTO"></param>
+            <returns></returns>
+        </member>
         <member name="T:BookStoreAPI.Controllers.HomeController">
             <summary>
             This is an API Test Controller

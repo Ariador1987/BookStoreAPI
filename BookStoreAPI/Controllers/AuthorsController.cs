@@ -184,7 +184,7 @@ namespace BookStoreAPI.Controllers
         {
             try
             {
-                _loggerService.LogInfo($"Author delet with id: {id} attempted");
+                _loggerService.LogInfo($"Author delete with id: {id} attempted");
 
                 if (id < 1)
                 {
