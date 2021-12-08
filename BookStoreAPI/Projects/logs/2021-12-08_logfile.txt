@@ -17,3 +17,6 @@
 2021-12-08 11:14:11.2752 INFO Create sucessful
 2021-12-08 12:13:19.9157 INFO Books Update: Update attempted on record 1.
 2021-12-08 12:13:43.9265 INFO Books Update: Record with id: 1 succesfully updated.
+2021-12-08 13:26:28.8438 INFO Books Delete: Delete operation initialized for id: 1.
+2021-12-08 13:31:15.8689 INFO Books Delete: Delete operation initialized for id: 3.
+2021-12-08 13:31:29.7755 INFO Books Delete: Delete successful for id: 3.

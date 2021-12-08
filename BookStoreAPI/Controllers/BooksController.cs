@@ -186,6 +186,55 @@ namespace BookStoreAPI.Controllers
             }
         }
 
+        /// <summary>
+        /// Deletes a book object from database
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        [HttpDelete("{id:int}")]
+        [ProducesResponseType(204)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(404)]
+        [ProducesResponseType(500)]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var location = GetControllerActionNames();
+
+            try
+            {
+                _loggerService.LogInfo($"{location}: Delete operation initialized for id: {id}.");
+                if (id < 1)
+                {
+                    _loggerService.LogWarn($"{location}: Delete failed with bad data - id: {id}.");
+                    return BadRequest();
+                }
+
+                var ifExsists = await _bookRepository.isExsists(id);
+                if (!ifExsists)
+                {
+                    _loggerService.LogWarn($"{location}: failed to retrieve record with id: {id}.");
+                    return NotFound();
+                }
+
+                var book = await _bookRepository.FindById(id);
+                var isSuccess = await _bookRepository.Delete(book);
+
+                if (!isSuccess)
+                {
+                    _loggerService.LogError($"{location}: Something went wrong when attempting to delete - id: {id}.");
+                    return InternalError($"{location}: Delete failed for id: {id}.");
+                }
+
+                _loggerService.LogInfo($"{location}: Delete successful for id: {id}.");
+                return StatusCode(204);
+            }
+            catch (Exception ex)
+            {
+                _loggerService.LogWarn($"{location}: Something went wrong with deleting a book.");
+                return InternalError($"{location}: Creation failed. {ex.Message} - {ex.InnerException}.");
+            }
+        }
+
         // PRIVATES
         private string GetControllerActionNames()
         {
