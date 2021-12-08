@@ -40,5 +40,7 @@ namespace BookStoreAPI.Data.DTOs
         public string Summary { get; set; }
         public string Image { get; set; }
         public double? Price { get; set; }
+        [Required]
+        public int? AuthorId { get; set; }
     }
 }
