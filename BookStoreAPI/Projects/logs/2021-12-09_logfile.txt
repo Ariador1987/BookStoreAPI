@@ -22,3 +22,5 @@
 2021-12-09 09:45:22.6451 INFO Users Login: admin Login Attempt
 2021-12-09 09:45:22.7422 WARN Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary
 2021-12-09 09:45:22.7422 WARN Users Login: admin Not Authenticated
+2021-12-09 09:50:32.9520 INFO Users - Login: Login Attempt from user admin 
+2021-12-09 09:50:44.2437 INFO Users - Login: admin Not Authenticated

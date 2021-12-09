@@ -64,12 +64,13 @@ namespace BookStoreAPI.Controllers
                     // nakon što nažemo usera
                     var tokenString = await GenerateJSONWebToken(user);
                     //var userToReturn = _mapper.Map<UserViewDTO>(user);
-                    
+
                     return StatusCode(200, new
                     {
                         token = tokenString
                     });
-                } else
+                }
+                else
                 {
                     _loggerService.LogWarn($"{ModelState}");
                 }
