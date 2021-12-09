@@ -1,0 +1,24 @@
+2021-12-09 09:25:39.4918 INFO Users Login: Admin Login Attempt
+2021-12-09 09:25:39.6048 WARN Users Login: Admin Not Authenticated
+2021-12-09 09:26:03.3020 INFO Users Login: Ad Login Attempt
+2021-12-09 09:26:03.3258 WARN Users Login: Ad Not Authenticated
+2021-12-09 09:26:05.0257 INFO Users Login: Ad Login Attempt
+2021-12-09 09:26:05.0257 WARN Users Login: Ad Not Authenticated
+2021-12-09 09:26:07.3315 INFO Users Login: Ad Login Attempt
+2021-12-09 09:26:07.3433 WARN Users Login: Ad Not Authenticated
+2021-12-09 09:26:11.5008 INFO Users Login: Admin Login Attempt
+2021-12-09 09:26:11.5287 WARN Users Login: Admin Not Authenticated
+2021-12-09 09:26:13.0182 INFO Users Login: Admin Login Attempt
+2021-12-09 09:26:13.0424 WARN Users Login: Admin Not Authenticated
+2021-12-09 09:26:36.6944 INFO Users Login: Admin Login Attempt
+2021-12-09 09:26:54.4954 WARN Users Login: Admin Not Authenticated
+2021-12-09 09:28:53.4998 INFO Users Login: admin Login Attempt
+2021-12-09 09:31:18.0028 INFO Users Login: admin Login Attempt
+2021-12-09 09:31:25.3528 WARN Users Login: admin Not Authenticated
+2021-12-09 09:37:25.1854 INFO Users Login: admin Login Attempt
+2021-12-09 09:37:30.7221 WARN Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary
+2021-12-09 09:37:32.0302 WARN Users Login: admin Not Authenticated
+2021-12-09 09:40:39.0796 INFO Users Login: admin Login Attempt
+2021-12-09 09:45:22.6451 INFO Users Login: admin Login Attempt
+2021-12-09 09:45:22.7422 WARN Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary
+2021-12-09 09:45:22.7422 WARN Users Login: admin Not Authenticated
